@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img"
+    tools:context=".MenuEditActivity">
+
+    <TextView
+        android:id="@+id/textViewAddFood"
+        android:layout_width="236dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="90dp"
+        android:layout_marginBottom="72dp"
+        android:autoText="false"
+        android:text="Edit Menu"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/grey"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/newFoodEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/newFoodEditText"
+        android:layout_width="330dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/custom_button_color"
+        android:hint="Enter Food Name"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/foodTypeSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAddFood" />
+
+    <Spinner
+        android:id="@+id/foodTypeSpinner"
+        android:layout_width="330dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/custom_button_color"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newFoodEditText" />
+
+    <EditText
+        android:id="@+id/priceEditText"
+        android:layout_width="330dp"
+        android:layout_height="41dp"
+        android:background="@drawable/button_background"
+        android:hint="Enter price"
+        android:inputType="numberDecimal"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/AddFood"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foodTypeSpinner"
+        app:layout_constraintVertical_bias="0.35" />
+
+    <Button
+        android:id="@+id/AddFood"
+        android:layout_width="140dp"
+        android:layout_height="55dp"
+        android:text="Add Food"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.615" />
+
+    <Button
+        android:id="@+id/populateMenuButton"
+        android:layout_width="140dp"
+        android:layout_height="55dp"
+        android:text="Populate Menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.955" />
+
+    <Spinner
+        android:id="@+id/spinnerDelete"
+        android:layout_width="330dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/custom_button_color"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/deleteFoodButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AddFood" />
+
+    <Button
+        android:id="@+id/deleteFoodButton"
+        android:layout_width="140dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="4dp"
+        android:text="Delete Food"
+        app:layout_constraintBottom_toTopOf="@+id/populateMenuButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerDelete" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

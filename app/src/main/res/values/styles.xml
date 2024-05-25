@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ButtonStyle" parent="Widget.AppCompat.Button">
+        <!-- Eliminăm specificarea background-ului -->
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="CulpaMia" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:accessibilityLiveRegion">polite</item>
+        <item name="android:backgroundTint">@color/custom_button_color</item>
+        <item name="android:backgroundTintMode">src_over</item>
+        <item name="android:baselineAligned">false</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:stateListAnimator">@android:anim/fade_in</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:theme">@style/ButtonStyle</item>
+    </style>
+
+</resources>

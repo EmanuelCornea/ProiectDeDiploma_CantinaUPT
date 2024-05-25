@@ -1,0 +1,87 @@
+{
+  "project_info": {
+    "project_number": "869324378968",
+    "firebase_url": "https://cantina-upt-default-rtdb.firebaseio.com",
+    "project_id": "cantina-upt",
+    "storage_bucket": "cantina-upt.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:869324378968:android:63faa94107cdb4ebf18b2d",
+        "android_client_info": {
+          "package_name": "com.CantinaUpt.loginandsignup"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEGq0vCr_CbR2NRqs7WKhzl-oWSYvmWOU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:869324378968:android:a63cf12cfd497c60f18b2d",
+        "android_client_info": {
+          "package_name": "com.example.licenta"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEGq0vCr_CbR2NRqs7WKhzl-oWSYvmWOU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:869324378968:android:0fdf37f9d3556fd1f18b2d",
+        "android_client_info": {
+          "package_name": "com.example.lucraredediploma"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEGq0vCr_CbR2NRqs7WKhzl-oWSYvmWOU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:869324378968:android:83aeb44cd69fe65af18b2d",
+        "android_client_info": {
+          "package_name": "com.example.proiectdediploma_cantinaupt"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEGq0vCr_CbR2NRqs7WKhzl-oWSYvmWOU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
