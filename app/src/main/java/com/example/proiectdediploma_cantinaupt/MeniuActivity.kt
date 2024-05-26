@@ -157,7 +157,7 @@ class MeniuActivity : AppCompatActivity() {
         val priceString = parts.getOrElse(2) { "" }.trim()
 
 
-        val priceValue = priceString.substringBefore('$').trim()
+        val priceValue = priceString.substringBefore("lei").trim()
 
 
         if (priceValue.isNotEmpty()) {

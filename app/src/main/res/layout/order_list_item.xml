@@ -9,6 +9,7 @@
         android:id="@+id/mainCourseTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/custom_button_color"
         android:text="Main Course"
         android:textSize="16sp" />
 
@@ -16,6 +17,7 @@
         android:id="@+id/sideDishTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/custom_button_color"
         android:text="Side Dish"
         android:textSize="16sp" />
 
@@ -23,6 +25,7 @@
         android:id="@+id/saladTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/custom_button_color"
         android:text="Salad"
         android:textSize="16sp" />
 
