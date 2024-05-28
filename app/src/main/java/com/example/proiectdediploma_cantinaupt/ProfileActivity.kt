@@ -8,7 +8,6 @@ import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
@@ -17,10 +16,9 @@ import com.google.firebase.storage.FirebaseStorage
 
 class ProfileActivity : AppCompatActivity() {
 
-    private lateinit var etName: EditText
-    private lateinit var etAddress: EditText
-    private lateinit var etPhoneNumber: EditText
-    private lateinit var etEmail: TextView
+    private lateinit var userName: EditText
+    private lateinit var userAdress: EditText
+    private lateinit var userPhoneNumber: EditText
     private lateinit var saveButton: Button
     private lateinit var backButton: Button
     private lateinit var changeProfileImageButton: Button
@@ -34,15 +32,12 @@ class ProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
-
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
         storage = FirebaseStorage.getInstance()
-
-
-        etName = findViewById(R.id.etName)
-        etAddress = findViewById(R.id.etAddress)
-        etPhoneNumber = findViewById(R.id.etPhoneNumber)
+        userName = findViewById(R.id.userName)
+        userAdress = findViewById(R.id.userAdress)
+        userPhoneNumber = findViewById(R.id.userPhoneNumber)
         saveButton = findViewById(R.id.saveButton)
         backButton = findViewById(R.id.backButton)
         changeProfileImageButton = findViewById(R.id.changeProfileImageButton)
@@ -57,9 +52,9 @@ class ProfileActivity : AppCompatActivity() {
 
 
         saveButton.setOnClickListener {
-            val name = etName.text.toString()
-            val address = etAddress.text.toString()
-            val phoneNumber = etPhoneNumber.text.toString()
+            val name = userName.text.toString()
+            val address = userAdress.text.toString()
+            val phoneNumber = userPhoneNumber.text.toString()
             val userId = auth.currentUser?.uid
             if (userId != null) {
                 val userData = hashMapOf(
@@ -105,9 +100,9 @@ class ProfileActivity : AppCompatActivity() {
                         val phoneNumber = document.getString("phone")
 
 
-                        etName.setText(name)
-                        etAddress.setText(address)
-                        etPhoneNumber.setText(phoneNumber)
+                        userName.setText(name)
+                        userAdress.setText(address)
+                        userPhoneNumber.setText(phoneNumber)
 
                     }
                 }

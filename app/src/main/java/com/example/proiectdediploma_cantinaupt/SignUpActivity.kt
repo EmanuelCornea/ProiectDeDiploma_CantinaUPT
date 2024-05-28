@@ -23,10 +23,8 @@ class SignUpActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         firebaseAuth = FirebaseAuth.getInstance()
         firestore = FirebaseFirestore.getInstance()
 
@@ -35,9 +33,9 @@ class SignUpActivity : AppCompatActivity() {
         binding.roleSignup.adapter = adapter
 
         binding.button.setOnClickListener {
-            val email = binding.emailEt.text.toString()
-            val pass = binding.passET.text.toString()
-            val confirmPass = binding.confirmPassEt.text.toString()
+            val email = binding.emailUser.text.toString()
+            val pass = binding.passUser.text.toString()
+            val confirmPass = binding.confirmPassUser.text.toString()
             selectedRole = binding.roleSignup.selectedItem.toString()
 
             if (email.isNotEmpty() && pass.isNotEmpty() && confirmPass.isNotEmpty() && selectedRole != null) {

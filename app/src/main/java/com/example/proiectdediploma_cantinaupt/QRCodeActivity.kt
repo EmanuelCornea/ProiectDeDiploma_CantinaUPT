@@ -6,6 +6,7 @@ import android.content.pm.PackageManager
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.RequiresApi
@@ -29,6 +30,7 @@ class QRCodeActivity : AppCompatActivity() {
             showCamera()
         }
         else{
+            Log.e("QRCodeActivity", "Failed to retrieve permission")
 
         }
 
@@ -55,7 +57,7 @@ private fun setResult(string: String){
         option.setCameraId(0)
         option.setBeepEnabled(false)
         option.setBarcodeImageEnabled(true)
-        option.setOrientationLocked(false)
+        option.setOrientationLocked(true)
 
         scanLauncher.launch(option)
 
@@ -71,23 +73,20 @@ private fun setResult(string: String){
 
 
         binding.Scanner.setOnClickListener {
-            checkPermissionCamera(this)
+            checkPermissionCamera()
 
          }
-
-
-
 
     }
 
     @RequiresApi(Build.VERSION_CODES.M)
-    private fun checkPermissionCamera(context : Context) {
-        if(ContextCompat.checkSelfPermission( context, android.Manifest.permission.CAMERA )== PackageManager.PERMISSION_GRANTED){
+    private fun checkPermissionCamera() {
+        if(ContextCompat.checkSelfPermission( this, android.Manifest.permission.CAMERA )== PackageManager.PERMISSION_GRANTED){
 
             showCamera()
         }
         else if(shouldShowRequestPermissionRationale(android.Manifest.permission.CAMERA)){
-            Toast.makeText(context, "Camera permission requested", Toast.LENGTH_SHORT)
+            Toast.makeText(this, "Camera permission requested", Toast.LENGTH_SHORT)
         }
         else{
             requestPermissionLauncher.launch(android.Manifest.permission.CAMERA)

@@ -26,7 +26,7 @@
         android:layout_width="200dp"
         android:layout_height="48dp"
         android:layout_marginTop="32dp"
-        android:text="Meniu"
+        android:text="Menu"
         app:layout_constraintEnd_toEndOf="@+id/logout"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/logout"
