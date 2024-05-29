@@ -23,7 +23,7 @@ class SignInActivity : AppCompatActivity() {
         setContentView(binding.root)
         firebaseAuth = FirebaseAuth.getInstance()
         firestore = FirebaseFirestore.getInstance()
-        binding.button.setOnClickListener {
+        binding.buttonLogin.setOnClickListener {
 
             val email = binding.emailUser.text.toString()
             val pass = binding.passUser.text.toString()
